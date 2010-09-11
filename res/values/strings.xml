@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="yourip">Your external IP is following:</string>
+    <string name="app_name">External IP</string>
+
+</resources>
