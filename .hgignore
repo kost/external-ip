@@ -4,3 +4,6 @@ syntax: glob
 syntax: regexp
 ^bin/
 ^gen/
+
+syntax: regexp
+\.log$
