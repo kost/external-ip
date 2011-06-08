@@ -83,7 +83,8 @@ public class ExternalIP extends Activity implements OnClickListener {
         ip.setText("Please wait...");  
         try {
         	HttpClient httpclient = new DefaultHttpClient();
-        	HttpGet httpget = new HttpGet("http://whatismyip.everdot.org/ip");
+        	HttpGet httpget = new HttpGet("http://wiki.iti-lab.org/ip.php");
+        	// HttpGet httpget = new HttpGet("http://whatismyip.everdot.org/ip");
         	// HttpGet httpget = new HttpGet("http://whatismyip.com.au/");
         	// HttpGet httpget = new HttpGet("http://www.whatismyip.org/");
         	HttpResponse response;
