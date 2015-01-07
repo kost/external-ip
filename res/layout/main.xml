@@ -15,7 +15,28 @@
 
 <EditText android:layout_width="wrap_content" android:layout_height="wrap_content" android:editable="false" android:text="In launch" android:id="@+id/extip"></EditText>
 
-<TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/txtandroidid" android:text="Your interface IP:"></TextView><EditText android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="In launch" android:id="@+id/androidip" android:editable="false"></EditText><Button android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Refresh" android:clickable="true" android:id="@+id/btnRefresh" android:visibility="visible"></Button>
+<TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/txtandroidid" android:text="Your interface IP:"></TextView><EditText android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="In launch" android:id="@+id/androidip" android:editable="false"></EditText>
+
+<LinearLayout
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content" >
+
+    <Button
+        android:id="@+id/btnRefresh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:text="Refresh"
+        android:visibility="visible" />
+
+    <Button
+        android:id="@+id/btnPreferences"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:text="Preferences"
+        android:visibility="visible" />
+</LinearLayout>
 
 <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/txtAbout" android:text="CopyRight (C) Kost"></TextView>
 </LinearLayout>

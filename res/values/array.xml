@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+ <resources>
+   <string-array name="listOptions">
+     <item>http://wtfismyip.com/text</item>
+     <item>http://icanhazip.com/</item>
+     <item>http://checkip.amazonaws.com/</item>
+     </string-array>
+ 
+   <string-array name="listValues">
+     <item>http://wtfismyip.com/text</item>
+     <item>http://icanhazip.com/</item>
+     <item>http://checkip.amazonaws.com/</item>
+   </string-array>
+ </resources>

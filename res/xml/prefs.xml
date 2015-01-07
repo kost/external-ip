@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+ <PreferenceCategory
+   android:summary="Remote URL server information"
+   android:title="Remote server" >
+
+    <ListPreference
+     android:entries="@array/listOptions"
+     android:entryValues="@array/listValues"
+     android:key="remoteurllist"
+     android:summary="Choose your preferred remote server/URL"
+     android:title="Remote URL" />
+
+  <EditTextPreference
+     android:key="remoteurl"
+     android:summary="Please enter custom URL to fetch external IP"
+     android:title="Custom URL" />
+
+ </PreferenceCategory>
+</PreferenceScreen>
