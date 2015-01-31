@@ -2,5 +2,15 @@
 <resources>
     <string name="yourip">Your external IP is following:</string>
     <string name="app_name">External IP</string>
-
+    <string name="btn_copy_title">Copy</string>
+    <string name="btn_refresh_title">Refresh</string>
+    <string name="btn_preferences_title">Preferences</string>
+    <string name="edt_your_interface_ip">Your interface IP:</string>
+    <string name="edt_in_launch">In launch</string>
+    <string name="copyright_text">CopyRight &#169; Kost</string>
+    <string name="toast_copied">Copied</string>
+    <string name="toast_to_clipboard">to clipboard!</string>
+    <string name="info_please_wait">Please wait</string>
+    <string name="info_error">Error</string>
+    <string name="info_response_long">Response too long or error.</string>
 </resources>

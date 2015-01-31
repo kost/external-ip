@@ -10,12 +10,59 @@
     android:text="@string/yourip"
     />
 
+<LinearLayout
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content" >
 
+    <EditText
+        android:id="@+id/extip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:editable="false"
+        android:ems="10"
+        android:text="@string/edt_in_launch" >
 
+        <requestFocus />
+    </EditText>
 
-<EditText android:layout_width="wrap_content" android:layout_height="wrap_content" android:editable="false" android:text="In launch" android:id="@+id/extip"></EditText>
+    <Button
+        android:id="@+id/btnExtIP"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:text="@string/btn_copy_title" />
 
-<TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/txtandroidid" android:text="Your interface IP:"></TextView><EditText android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="In launch" android:id="@+id/androidip" android:editable="false"></EditText>
+</LinearLayout>
+
+<TextView
+    android:id="@+id/txtandroidid"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="@string/edt_your_interface_ip" >
+</TextView>
+
+<LinearLayout
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content" >
+
+    <EditText
+        android:id="@+id/androidip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:editable="false"
+        android:ems="10"
+        android:text="@string/edt_in_launch" />
+
+    <Button
+        android:id="@+id/btnIntfIP"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:text="@string/btn_copy_title" />
+
+</LinearLayout>
 
 <LinearLayout
     android:layout_width="fill_parent"
@@ -26,7 +73,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:clickable="true"
-        android:text="Refresh"
+        android:text="@string/btn_refresh_title"
         android:visibility="visible" />
 
     <Button
@@ -34,9 +81,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:clickable="true"
-        android:text="Preferences"
+        android:text="@string/btn_preferences_title"
         android:visibility="visible" />
 </LinearLayout>
 
-<TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/txtAbout" android:text="CopyRight (C) Kost"></TextView>
+<TextView
+    android:id="@+id/txtAbout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="@string/copyright_text" >
+</TextView>
 </LinearLayout>

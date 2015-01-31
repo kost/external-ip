@@ -26,8 +26,8 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 
 public class ExternalIP extends Activity implements OnClickListener {
-	EditText ip;
-	EditText aip;
+	private EditText ip;
+	private EditText aip;
 	
     /** Called when the activity is first created. */
     @Override
@@ -44,17 +44,38 @@ public class ExternalIP extends Activity implements OnClickListener {
         Button btnPrefs = (Button)findViewById(R.id.btnPreferences);
         btnPrefs.setOnClickListener(this);
 
+        Button btnCopyExtIP = (Button)findViewById(R.id.btnExtIP);
+        btnCopyExtIP.setOnClickListener(this);
+        
+        Button btnCopyIntfIP = (Button)findViewById(R.id.btnIntfIP);
+        btnCopyIntfIP.setOnClickListener(this);
+        
         updateIP();
     }
     
-    public void updateIP() {
+    private void updateIP() {
     	getCurrentIP();
     	dispAndroidIP();
     	
+    	Toast.makeText(getApplicationContext(), "IP refreshed",Toast.LENGTH_SHORT).show();
+    }
+    
+    private void copyExtIP() {
     	android.text.ClipboardManager clipboard = (android.text.ClipboardManager)getSystemService(CLIPBOARD_SERVICE); 
     	clipboard.setText(ip.getText());
     	
-    	Toast.makeText(getApplicationContext(), "Copied "+ip.getText()+" to clipboard", Toast.LENGTH_SHORT).show();
+    	Toast.makeText(getApplicationContext(), 
+    			getString(R.string.toast_copied)+" "+ip.getText()+" "+getString(R.string.toast_to_clipboard), 
+    			Toast.LENGTH_SHORT).show();   
+    }
+
+    private void copyIntfIP() {
+    	android.text.ClipboardManager clipboard = (android.text.ClipboardManager)getSystemService(CLIPBOARD_SERVICE); 
+    	clipboard.setText(aip.getText());
+    	
+    	Toast.makeText(getApplicationContext(), 
+    			getString(R.string.toast_copied)+" "+aip.getText()+" "+getString(R.string.toast_to_clipboard), 
+    			Toast.LENGTH_SHORT).show();   
     }
     
     public void onClick(View v) {
@@ -67,13 +88,18 @@ public class ExternalIP extends Activity implements OnClickListener {
     	   case R.id.btnRefresh:
     	      updateIP();
     	      break;
-    	 
-    	   default:
-    	     break;
+    	      
+    	   case R.id.btnExtIP:
+    		   copyExtIP();
+    		   break;
+
+    	   case R.id.btnIntfIP:
+    		   copyIntfIP();
+    		   break;    	 
     	   }
     }
     
-    public String getAndroidIP () {
+	private String getAndroidIP () {
     	    try {
                 String interfaces="";
     	        for (Enumeration<NetworkInterface> en = NetworkInterface.getNetworkInterfaces(); en.hasMoreElements();) {
@@ -92,18 +118,18 @@ public class ExternalIP extends Activity implements OnClickListener {
     	    return null;
     }
     
-    public void dispAndroidIP () {
+    private void dispAndroidIP () {
     	String andIP;
-    	aip.setText("Please wait...");
+    	aip.setText(getString(R.string.info_please_wait));
     	andIP = getAndroidIP();
     	if (andIP==null) {
-    		aip.setText("Error");
+    		aip.setText(getString(R.string.info_error));
     	} else {
     		aip.setText(andIP);
     	}
     }
     
-    public void getCurrentIP () {
+    private void getCurrentIP () {
     	
     	SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
     	
@@ -115,7 +141,7 @@ public class ExternalIP extends Activity implements OnClickListener {
     		useurl = remoteurl;
     	}
     	
-        ip.setText("Please wait...");  
+        ip.setText(getString(R.string.info_please_wait));  
         try {
         	HttpClient httpclient = new DefaultHttpClient();
         	HttpGet httpget = new HttpGet(useurl);
@@ -133,19 +159,19 @@ public class ExternalIP extends Activity implements OnClickListener {
         			//Log.i("externalip",str);
                     ip.setText(str);
         		} else {
-        			ip.setText("Response too long or error.");
+        			ip.setText(getString(R.string.info_response_long));
         			//debug
         			//ip.setText("Response too long or error: "+EntityUtils.toString(entity));
         			//Log.i("externalip",EntityUtils.toString(entity));
         		}            
         	} else {
-        		ip.setText("Null:"+response.getStatusLine().toString());
+        		ip.setText(getString(R.string.info_error)+response.getStatusLine().toString());
         	}
             
         }
         catch (Exception e)
         {
-            ip.setText("Error");
+            ip.setText(getString(R.string.info_error));
         }
 
     }
