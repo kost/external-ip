@@ -28,6 +28,10 @@ ant release
 
 # Changes
 
+Changes in 2.3:
+- make http request as background task
+- introduce ant build support
+
 Changes since last version: 
 - ability to enter custom external URL to get IP
 - ability to choose different IP providers
