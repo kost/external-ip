@@ -10,7 +10,7 @@
     <string name="copyright_text">CopyRight &#169; Kost</string>
     <string name="toast_copied">Copied</string>
     <string name="toast_to_clipboard">to clipboard!</string>
-    <string name="info_please_wait">Please wait</string>
+    <string name="info_please_wait">Please wait - updating</string>
     <string name="info_error">Error</string>
     <string name="info_response_long">Response too long or error.</string>
 </resources>
