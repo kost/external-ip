@@ -26,6 +26,14 @@ echo sdk.dir=/opt/android-sdks > local.properties
 ant release
 ```
 
+# Donate
+
+BTC: 1pafmH6QqRXfmVef3RGJcDiD9AMjxrzfX
+
+LTC: LecEdQxBhR4kPJENejpPDBWev38j5G9qfy
+
+[![Flattr this git repo](http://api.flattr.com/button/flattr-badge-large.png)](https://flattr.com/submit/auto?user_id=kost&url=https://github.com/kost/external-ip&title=External%20IP&language=&tags=github&category=software) 
+
 # Changes
 
 Changes in 2.3:
