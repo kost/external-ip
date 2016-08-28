@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/kost/external-ip.png)](https://travis-ci.org/kost/external-ip)
+
 # external-ip
 
 Simple application to display IP addresses in form that you can copy&paste them.
